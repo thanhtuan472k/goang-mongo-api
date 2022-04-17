@@ -4,8 +4,14 @@ import "go.mongodb.org/mongo-driver/mongo"
 
 // Collection Name
 const (
-	users = "users"
+	admins = "admins"
+	users  = "users"
 )
+
+// AdminCol
+func AdminCol() *mongo.Collection {
+	return db.Collection(admins)
+}
 
 // UserCol...
 func UserCol() *mongo.Collection {
