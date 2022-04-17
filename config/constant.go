@@ -5,6 +5,10 @@ type Database struct {
 	Name string
 }
 
+type Jwt struct {
+	SecretKey string
+}
+
 // ENV .env struct
 type ENV struct {
 	// App port
@@ -12,4 +16,7 @@ type ENV struct {
 
 	// Database
 	Database Database
+
+	// Jwt
+	Jwt Jwt
 }

@@ -1,10 +1,9 @@
 package config
 
 import (
+	"github.com/joho/godotenv"
 	"log"
 	"os"
-
-	"github.com/joho/godotenv"
 )
 
 var env ENV
@@ -18,10 +17,12 @@ func InitDotEnv() {
 
 	appPort := GetEnvString("PORT")
 	database := Database{URI: GetEnvString("DB_URI"), Name: GetEnvString("DB_NAME")}
+	jwt := Jwt{SecretKey: GetEnvString("SECRET_KEY")}
 
 	env = ENV{
 		AppPort:  appPort,
 		Database: database,
+		Jwt:      jwt,
 	}
 }
 
