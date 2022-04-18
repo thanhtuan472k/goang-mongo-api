@@ -7,25 +7,6 @@ import (
 	"myapp/utils"
 )
 
-//func AdminLogin(loginBody models.AdminLoginBody) (string, error) {
-//	// find admin in db
-//	admin, err := dao.AdminFindByemail(loginBody.email)
-//
-//	if err != nil {
-//		return "", err
-//	}
-//
-//	if admin.Password != loginBody.Password {
-//		return "", errors.New("wrong password")
-//	}
-//	data := map[string]interface{}{
-//		"id":      admin.ID,
-//		"isAdmin": true,
-//	}
-//
-//	return utils.GenerateUserToken(data), err
-//}
-
 // AdminLogin ...
 func AdminLogin(loginBody models.AdminLoginBody) (string, error) {
 	// find admin in db

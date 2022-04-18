@@ -1,10 +1,11 @@
 package utils
 
 import (
-	"github.com/golang-jwt/jwt"
-	"github.com/labstack/echo/v4"
 	"myapp/config"
 	"time"
+
+	"github.com/golang-jwt/jwt"
+	"github.com/labstack/echo/v4"
 )
 
 // JwtCustomClaims
@@ -23,7 +24,7 @@ func GenerateUserToken(data map[string]interface{}) string {
 		//data["id"].(primitive.ObjectID).Hex(),
 		data,
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(time.Minute * 1).Unix(),
+			ExpiresAt: time.Now().Add(time.Minute * 5).Unix(), // 1 minute expire
 		},
 	}
 

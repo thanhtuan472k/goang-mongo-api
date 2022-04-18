@@ -9,14 +9,11 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-//func Register(c echo.Context) error {
-//	var userRegister = c.Get("adminRegisterBody").(models.AdminRegisterBody)
-//
-//	// process data
-//
-//}
+func UserRegister(c echo.Context) error {
+	return c.JSON(http.StatusOK, "Register User, Create User for admin")
+}
 
-func Login(c echo.Context) error {
+func UserLogin(c echo.Context) error {
 	return c.JSON(http.StatusOK, "Login for Admin feature")
 }
 
@@ -30,6 +27,7 @@ func AdminLogin(c echo.Context) error {
 	if err != nil {
 		return utils.Response400(c, nil, err.Error())
 	}
+
 	// token
 	data := map[string]interface{}{
 		"token":   token,

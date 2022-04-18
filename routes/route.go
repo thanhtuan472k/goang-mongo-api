@@ -5,5 +5,6 @@ import (
 )
 
 func Route(e *echo.Echo) {
-	// users(e)
+	Auth(e)
+	User(e)
 }
