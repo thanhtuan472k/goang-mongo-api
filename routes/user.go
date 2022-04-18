@@ -1,10 +1,10 @@
 package routes
 
 import (
-	"myapp/config"
-	"myapp/controllers"
-	"myapp/middlewares"
-	validation "myapp/validations"
+	"golang-mongo-api/config"
+	"golang-mongo-api/controllers"
+	"golang-mongo-api/middlewares"
+	validation "golang-mongo-api/validations"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

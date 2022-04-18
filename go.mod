@@ -1,4 +1,4 @@
-module myapp
+module golang-mongo-api
 
 go 1.18
 

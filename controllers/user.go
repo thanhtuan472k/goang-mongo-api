@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"myapp/models"
-	"myapp/service"
-	"myapp/utils"
+	"golang-mongo-api/models"
+	"golang-mongo-api/service"
+	"golang-mongo-api/utils"
 
 	"github.com/labstack/echo/v4"
 )

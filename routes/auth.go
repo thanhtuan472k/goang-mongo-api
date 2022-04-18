@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"myapp/controllers"
-	validation "myapp/validations"
+	"golang-mongo-api/controllers"
+	validation "golang-mongo-api/validations"
 
 	"github.com/labstack/echo/v4"
 )

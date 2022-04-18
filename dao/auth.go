@@ -2,8 +2,8 @@ package dao
 
 import (
 	"context"
-	"myapp/database"
-	"myapp/models"
+	"golang-mongo-api/database"
+	"golang-mongo-api/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"myapp/utils"
+	"golang-mongo-api/utils"
 
 	"github.com/labstack/echo/v4"
 )

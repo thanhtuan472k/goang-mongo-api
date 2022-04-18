@@ -2,8 +2,8 @@ package service
 
 import (
 	"errors"
-	"myapp/dao"
-	"myapp/models"
+	"golang-mongo-api/dao"
+	"golang-mongo-api/models"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

@@ -3,8 +3,8 @@ package database
 import (
 	"context"
 	"fmt"
+	"golang-mongo-api/config"
 	"log"
-	"myapp/config"
 	"time"
 
 	"go.mongodb.org/mongo-driver/mongo"

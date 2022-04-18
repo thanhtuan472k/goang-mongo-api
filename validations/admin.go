@@ -1,8 +1,8 @@
 package validation
 
 import (
-	"myapp/models"
-	"myapp/utils"
+	"golang-mongo-api/models"
+	"golang-mongo-api/utils"
 
 	"github.com/labstack/echo/v4"
 )

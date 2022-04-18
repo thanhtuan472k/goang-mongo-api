@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"myapp/config"
+	"golang-mongo-api/config"
 	"time"
 
 	"github.com/golang-jwt/jwt"

@@ -2,9 +2,9 @@ package service
 
 import (
 	"errors"
-	"myapp/dao"
-	"myapp/models"
-	"myapp/utils"
+	"golang-mongo-api/dao"
+	"golang-mongo-api/models"
+	"golang-mongo-api/utils"
 )
 
 // AdminLogin ...
