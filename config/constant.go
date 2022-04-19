@@ -18,5 +18,6 @@ type ENV struct {
 	Database Database
 
 	// Jwt
-	Jwt Jwt
+	Jwt        Jwt
+	ExpireTime int64
 }
