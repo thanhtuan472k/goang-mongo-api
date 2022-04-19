@@ -25,6 +25,9 @@ type (
 	UserUpdateBody struct {
 		Name string `json:"name"`
 	}
+
+	Page struct {
+	}
 )
 
 func (u UserCreateBody) Validate() error {
