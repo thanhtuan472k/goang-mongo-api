@@ -16,5 +16,4 @@ func CheckAdminRole(next echo.HandlerFunc) echo.HandlerFunc {
 
 		return utils.Response400(c, nil, "authorization fail: not admin")
 	}
-
 }

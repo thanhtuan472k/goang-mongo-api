@@ -49,12 +49,3 @@ func GetListUser(c echo.Context) error {
 
 	return utils.Response200(c, users, "")
 }
-
-//func GetListUserPerPage(c echo.Context) error {
-//	page, _ := strconv.Atoi(c.QueryParam("page"))
-//	limit, _ := strconv.Atoi(c.QueryParam("limit"))
-//
-//	players := service.GetListUserPerPage(page, limit)
-//
-//	return utils.Response200(c, players, "")
-//}
