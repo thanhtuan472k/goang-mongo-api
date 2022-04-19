@@ -18,7 +18,6 @@ func InitDotEnv() {
 	appPort := GetEnvString("PORT")
 	database := Database{URI: GetEnvString("DB_URI"), Name: GetEnvString("DB_NAME")}
 	jwt := Jwt{SecretKey: GetEnvString("SECRET_KEY")}
-	//expireTime := GetEnvString("EXPIRE_TIME")
 
 	env = ENV{
 		AppPort:  appPort,
