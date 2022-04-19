@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
 	"golang-mongo-api/config"
 	"golang-mongo-api/dao"
 	"golang-mongo-api/database"
 	"golang-mongo-api/routes"
+
+	"github.com/labstack/echo/v4"
 )
 
 func init() {

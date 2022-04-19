@@ -50,11 +50,3 @@ func DeleteUser(ID string) error {
 	objID, _ := primitive.ObjectIDFromHex(ID)
 	return dao.DeletePlayer(objID)
 }
-
-func GetListUserPerPage(page, limit int) []models.User {
-	return dao.GetListUserPerPage(page, limit)
-}
-
-// get - query
-// set - query
-//
