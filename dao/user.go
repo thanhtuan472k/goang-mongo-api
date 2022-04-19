@@ -7,6 +7,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	options2 "go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func CheckUserEmailExisted(email string) bool {
@@ -84,4 +85,31 @@ func DeletePlayer(ID primitive.ObjectID) error {
 	}
 
 	return nil
+}
+
+func GetListUserPerPage(page, limit int) []models.User {
+	var (
+		userCol = database.UserCol()
+		ctx     = context.Background()
+		users   []models.User
+	)
+
+	options := new(options2.FindOptions)
+	if limit != 0 {
+		if page == 0 {
+			page = 1
+		}
+		options.SetSkip(int64((page - 1) * limit))
+		options.SetLimit(int64(limit))
+	}
+
+	cursor, err := userCol.Find(ctx, bson.D{}, options)
+	if err != nil {
+		return nil
+	}
+
+	if err = cursor.All(ctx, &users); err != nil {
+		return nil
+	}
+	return users
 }
