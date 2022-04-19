@@ -18,7 +18,7 @@ func User(e *echo.Echo) {
 	users := e.Group("/users", isLogin, middlewares.CheckAdminRole)
 	users.POST("", controllers.CreateUser, validation.UserCreateBody)
 	users.GET("", controllers.GetListUser)
-	users.GET("", controllers.GetListUserPerPage)
+	//users.GET("", controllers.GetListUserPerPage)
 	users.PUT("/:id", controllers.UpdateUser, validation.ValidateID, validation.UserUpdateBody)
 	users.DELETE("/:id", controllers.DeleteUser, validation.ValidateID)
 }
